@@ -1,0 +1,58 @@
+.box {
+    height: 397px;
+    width: 428px;
+  }
+
+.box .spaceman-container {
+  position: absolute;
+  right: 400px;
+  top: 60px;
+}
+
+.box .rocket-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  bottom: 20px;
+  opacity: 0.5;
+}
+  
+  .box .planet {
+    position: absolute;
+    right: 167px;
+    bottom: 7px;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding: 122px;
+  }
+  
+  .box .overlap-group {
+    height: 290px;
+    left: 147px;
+    position: relative;
+    top: 37px;
+    width: 361px;
+  }
+  
+  .box .vector {
+    height: 274px;
+    left: -30px;
+    position: absolute;
+    top: 31px;
+    width: 381px;
+    z-index: 1;
+  }
+  
+  .box .img {
+    height: 274px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 293px;
+  }
+  

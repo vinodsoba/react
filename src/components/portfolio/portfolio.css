@@ -1,0 +1,12 @@
+.header-hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-hero);
+    height: 25vh;
+}
+
+.header-hero-container h1 {
+    color: var(--text-primary);
+    
+}

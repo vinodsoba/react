@@ -1,0 +1,43 @@
+.services-container {
+    text-align: left;
+    padding: 50px 0px 40px 20px;
+    height: 100%;
+    
+}
+
+.services-container h1 {
+    font-family: Manrope;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 1em;
+
+}
+
+.services-container h2 {
+    font-size: 40px;
+    padding-bottom: 2em;
+}
+
+
+.services-container .cta img {
+    padding-left: 1em;
+}
+
+.services-container a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #000;
+    
+}
+
+.services-container a:hover {
+    animation-name: animation;
+    animation-duration: 4s;
+    transition: all 4s ease;
+}
+
+@keyframes animation {
+    0%   { position: relative; left: 0px}
+    50%  { position: relative; left: 50px;}
+    100% { position: relative; left: 0px;}
+  }
