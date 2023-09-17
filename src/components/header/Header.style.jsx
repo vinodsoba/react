@@ -5,6 +5,17 @@ export const HeaderWrapper = styled.div`
     text-align: left;
     padding: 20px 0 0 20px;
     font-size: 2em;
-    font-weight: semi-bold
+    font-weight: semi-bold;
+    color: var(--text-primary);
 }
+
+.row {
+    margin:0;
+    padding:0;
+}
+
+.header-container {
+    background-color: var(--bg-navbar);
+}
+
 ` 
