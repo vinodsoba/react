@@ -8,12 +8,16 @@ function Footer() {
         <FooterContainer style={{ backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundImage: `url(${FooterBg})`}}>
             <Row>
                 <Col md={6}>
+                    <div className='footer-container'>
                     <h1>Overview</h1>
                     <p>I'm a freelance web designer/developer working remotely with clients in London & across the country. If you're looking for a quote, or even just some advice then please don't hesitate to get in touch, I'm here to help!</p>
+                    </div>
                 </Col>
                 <Col md={6}>
+                    <div className='footer-container__wrapper'>
                     <h2>GET IN TOUCH</h2>
                     <a href="mailto:hello@vinodsoba.co.uk">hello@vinodsoba.co.uk</a>
+                    </div>
                 </Col>
             </Row>
            

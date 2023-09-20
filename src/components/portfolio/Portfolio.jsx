@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom';
 
 // bootstrap
 import Row from 'react-bootstrap/Row';
@@ -30,21 +31,21 @@ class Portfolio extends Component {
 
         if(isLoading) {
             return (
-                <div>
+                <Row>
                 {
-                data.map(item => 
-                    <Row>
-                        <Col md={4}>
-                            <h1 key={item.id}>{item.title.rendered}</h1>
-                            <h2>{item.acf.portfolio_title}</h2>
-                            <img src={item.acf.portfolio_image} alt={item.title.rendered} />
-
-                        </Col>
-                         
-                    </Row>
-                 
+                data.map(item =>             
+                <Col md={4}>
+                    <div className="card">
+                    <img className="card-img-top" src={item.acf.portfolio_image} alt={item.title.rendered} />
+                        <div className="card-body">
+                            <h3 key={item.id} className="card-title">{item.title.rendered}</h3>
+                            <h5>{item.acf.portfolio_title}</h5>
+                        </div>
+                        <Link to={item.acf.cta_url}>{item.acf.cta_text}</Link>
+                    </div>
+                </Col>
                 )}
-                </div> 
+                 </Row>
             )
         } else {
             return <div>Loading...</div>

@@ -1,16 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
 import Home from '../components/home/Home';
 import Services from '../components/services/Services';
 
-class HomePage extends Component {    
-    render() { 
-        return (
-            <div>
-                <Home />
-                <Services />
-            </div>
-        );
-    }
+// import Theme Provider
+
+
+const Homepage = () => {
+
+  return (
+    <div>
+        <Home />
+        <Services />
+    </div>
+  )
 }
- 
-export default HomePage;
+
+export default Homepage;
