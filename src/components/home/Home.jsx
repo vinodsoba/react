@@ -5,7 +5,8 @@ import HeroBanner from '../herobanner/HeroBanner';
 class Home extends Component {
     state = { 
         data: [],
-        isLoading: false
+        isLoading: false,
+       
      } 
 
      componentDidMount() {
@@ -30,9 +31,8 @@ class Home extends Component {
                         <div dangerouslySetInnerHTML={{__html: item.content.rendered}} />
                     : null
                     )
-
                 }
-                <HeroBanner />
+                <HeroBanner/>
                 </>
                
             );

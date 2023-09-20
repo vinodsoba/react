@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+
+
 export const HeroWrapper = styled.div`
 width: 100%;
 height: 599px;
@@ -46,7 +48,6 @@ h4 {
     width: 100%;
     position: absolute;
     text-align: left;
-    color: #fff;
     height: 152px;
     color: #FFF;
     font-size: 32px;

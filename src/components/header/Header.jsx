@@ -19,7 +19,9 @@ function Header() {
                 <Col md={4}>
                     <Navbar.Collapse className='justify-content-end'>   
                         <Navigation />
-                        <button onClick={() => toggleTheme()}>{theme}</button>
+                        <div class="form-check form-switch">
+                            <input onClick={() => toggleTheme()} class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                        </div>
                     </Navbar.Collapse>
                 </Col>
             </Navbar>
