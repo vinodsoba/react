@@ -12,7 +12,7 @@ function Navigation() {
     return ( 
         <NavigationWrapper>
             <ul>
-                <Link to="/services" style={theme === 'dark-theme' ? { color: '#fff' } : { color: '#000'}}>Services</Link>
+                <Link to="/services">Services</Link>
                 <Link to="/work">Work</Link>
                 <Link to="/about">About</Link>
                 <Link to="/contact">Contact</Link>
