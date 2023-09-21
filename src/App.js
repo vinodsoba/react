@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import  { BrowserRouter,  Routes, Route }  from 'react-router-dom';
+import  { BrowserRouter,  Routes, useHistory, Route }  from 'react-router-dom';
 
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,6 +13,7 @@ import Footer from './components/footer/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Work from './pages/Work';
+import PortfolioDetail from './pages/PortfolioDetail';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="/work" element={<Work/>} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/work/portfoliodetail/:id" element={<PortfolioDetail />} />
             </Routes>
           <Footer />
         </div>
