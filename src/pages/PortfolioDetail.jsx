@@ -9,7 +9,7 @@ function PortfolioDetail() {
     const [ data, setData ] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost/vinodsoba/wp-json/wp/v2/portfolio/${id}`)
+        axios.get(`https://dev.vinodsoba.co.uk/wp-json/wp/v2/portfolio/${id}`)
         .then((response) => setData({
             data: response.data,
             title: response.data.title.rendered,

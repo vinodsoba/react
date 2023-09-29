@@ -1,27 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { ThemeContext } from "../../Theme";
 
 // images
-import PlanetRing from './../../assets/img/planet-ring.png';
-import Planet from './../../assets/img/planet.png';
+
 import SpaceMan from './../../assets/img/spaceman.svg';
 import Rocket from './../../assets/img/rocket.svg';
 import "./style.css";
 
+import Sun from './../../assets/img/sun.png';
+import Planet from './../../assets/img/planet.png';
+
 export default function Galaxy() {
+
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="box">
       <div className="spaceman-container">
-      <img className="spaceman" alt="space-man" src={SpaceMan} />
+        <img className="spaceman" alt="space-man" src={SpaceMan} />
       </div>
-    <div className="planet">
-      <div className="overlap-group">
-        <img className="vector" alt="planet-ring" src={PlanetRing} />
-        <img className="img" alt="planet" src={Planet} />
+      <div className="stars-planets">
+    
+          <div className="stars" style={theme === 'dark-theme' ? { backgroundImage: `url(${Planet})`, backgroundRepeat: 'no-repeat'} : {backgroundImage: `url(${Sun})`, backgroundRepeat: 'no-repeat'} }>
+
+          </div>
       </div>
-    </div>
-    <div className="rocket-container">
-    <img className="rocket" alt="rocket" src={Rocket} />
-    </div>
+   
+    
+      <div className="rocket-container">
+        <img className="rocket" alt="rocket" src={Rocket} />
+      </div>
   </div>
   )
 }

@@ -12,7 +12,7 @@ import axios from 'axios';
 import './portfolio.css';
 
 // url
-const URL = "http://localhost/vinodsoba/wp-json/wp/v2/portfolio";
+const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/portfolio";
 
 function Portfolio() {
     const history = useNavigate();

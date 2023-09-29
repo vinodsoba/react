@@ -9,10 +9,6 @@ export const HeaderWrapper = styled.div`
     color: var(--text-primary);
 }
 
-.justify-content-end {
-    max-height: 75px;
-}
-
 .row {
     margin:0;
     padding:0;
