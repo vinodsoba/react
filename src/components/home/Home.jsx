@@ -10,7 +10,7 @@ class Home extends Component {
      } 
 
      componentDidMount() {
-        axios.get("http://localhost/vinodsoba/wp-json/wp/v2/pages")
+        axios.get("https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages")
         .then(res => this.setState({
             data: res.data,
             isLoading: true

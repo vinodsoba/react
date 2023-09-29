@@ -5,7 +5,7 @@ import axios from 'axios';
 // module
 import Portfolio from '../components/portfolio/Portfolio';
 
-const URL = "http://localhost/vinodsoba/wp-json/wp/v2/pages?limit=1";
+const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages?limit=1";
 
 class Work extends Component {
     state = {  

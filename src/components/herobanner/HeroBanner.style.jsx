@@ -5,6 +5,11 @@ import styled from 'styled-components'
 export const HeroWrapper = styled.div`
 width: 100%;
 height: 599px;
+position: relative;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
 
 .red {
     position: relative;
@@ -28,33 +33,41 @@ height: 599px;
 }
 
 h1 {
-    position: absolute;
-    width: 100%;
-    height: 134px;
-    flex-shrink: 0;
-    text-align:left;
-    font-size: 48px;
+    font-family: Manrope;
+    font-size: 64px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    background: linear-gradient(180deg, #40D6C9 0%, rgba(199, 216, 215, 0.60) 99.99%, rgba(44, 213, 198, 0.00) 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 99px 564px 366px 94px; 
+    text-align: left;
+    padding: 20px 10px 20px 20px;
+    max-width: 979px;
+    height: 151px;
+    flex-shrink: 0;
+
+    @media(max-width: 768px){
+        padding: 0;
+    }
 }
 
 h4 {
-    width: 100%;
-    position: absolute;
-    text-align: left;
-    height: 152px;
-    color: #FFF;
+    font-family: Manrope;
     font-size: 32px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: normal;
-    padding: 255px 582px 192px 94px;
+    max-width: 1087px;
+    text-align: left;
+    height: auto;
+    flex-shrink: 0;
+    padding: 60px 10px 20px 20px;
+
+    @media (max-width: 1425px){
+        max-width: 675px;
+    }
+
+    @media (max-width: 768px){
+        padding: 0;
+    }
 }
 
 button {
@@ -70,5 +83,4 @@ button {
     border: none;
     color: #fff;
 }
-
 `

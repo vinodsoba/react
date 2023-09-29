@@ -24,7 +24,7 @@ import { HeroWrapper } from './HeroBanner.style';
 
 
 // axios fetch url
-const URL = "http://localhost/vinodsoba/wp-json/wp/v2/pages";
+const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages";
 
  function HeroBanner() {
     const { theme } = useContext(ThemeContext);
@@ -51,9 +51,9 @@ const URL = "http://localhost/vinodsoba/wp-json/wp/v2/pages";
                 post.map( image => image.id === 6 ? 
           
                 <div key={image.id} className={image.acf.choose_background_colour}>
-                    <div style={theme === 'light-theme' ? { background: '#f0f8ff', height: '100%' }  : {backgroundImage: `url(${StarBackground})`} }>
+                    <div style={theme === 'light-theme' ? { background: 'rgb(110 176 239)', height: '100%' }  : {backgroundImage: `url(${StarBackground})`} }>
                     <Row>
-                        <Col md={12}><h1>{image.acf.hero_banner_title} </h1> </Col>
+                        <Col md={12}><h1 style={theme === 'dark-theme' ? {color: '#62FAED'} : {color: '#000000'}}><div dangerouslySetInnerHTML={{__html: image.acf.hero_banner_title}} /></h1> </Col>
                         <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{image.acf.hero_banner_subtitle}</h4></Col>
                         <Col md={12}><button>{image.acf.cta_text}</button></Col>
                         <Galaxy />

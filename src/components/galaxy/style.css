@@ -19,16 +19,25 @@
   opacity: 0.5;
 }
   
-  .box .planet {
+  .stars-planets {
     position: absolute;
-    right: 167px;
-    bottom: 7px;
+    right: 33px;
+    top: 156px;
     display: flex;
     align-content: space-between;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
     padding: 122px;
+    width: 429px;
+    height: 340px;
+  }
+
+  .stars {
+    width: 429px;
+    height: 340px;
+    position: absolute;
+    right:0;
   }
   
   .box .overlap-group {

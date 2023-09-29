@@ -11,7 +11,7 @@ function Header() {
     return ( 
         <HeaderWrapper>
             <div className='header-container'>
-            <Navbar expand="sm" className="justify-content-end">
+            <Navbar expand="sm" className="justify-content-end nav">
                 <Col md={8}>
                     <Navbar.Brand href="/"><Logo /></Navbar.Brand>
                 </Col>
