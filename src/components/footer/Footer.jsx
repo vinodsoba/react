@@ -1,7 +1,7 @@
 
 import { FooterContainer } from './Footer.style';
 import FooterBg from './../../assets/img/vs-footer-bg.png';
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 
 function Footer() {
     return ( 
@@ -19,9 +19,15 @@ function Footer() {
                     <a href="mailto:hello@vinodsoba.co.uk">hello@vinodsoba.co.uk</a>
                     </div>
                 </Col>
-            </Row>
-           
+                <Container>
+                    <Row>
+                        <h1 style={{ fontSize: '32px', color: '#62FAED' }}>Pages</h1>
+                        <hr style={{ width: '100%', border: '1px #0D9488 solid'}}/>
+                    </Row>
+                </Container>
+            </Row>  
         </FooterContainer>
+
      );
 }
 

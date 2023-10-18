@@ -34,7 +34,7 @@ right: 0;
 
 h1 {
     font-family: Manrope;
-    font-size: 64px;
+    font-size: 47px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -51,7 +51,7 @@ h1 {
 
 h4 {
     font-family: Manrope;
-    font-size: 32px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -59,7 +59,7 @@ h4 {
     text-align: left;
     height: auto;
     flex-shrink: 0;
-    padding: 60px 10px 20px 20px;
+    padding: 40px 10px 20px 20px;
 
     @media (max-width: 1425px){
         max-width: 675px;
@@ -72,9 +72,9 @@ h4 {
 
 button {
     position: absolute;
-    top: 459px;
+    top: 345px;
     right: 1004px;
-    left: 94px;
+    left: 33px;
     bottom: 84px;
     width: 202px;
     height: 56px;
@@ -83,4 +83,11 @@ button {
     border: none;
     color: #fff;
 }
+
+@media(max-width: 776px) {
+    .hero-wrapper h1 {
+        font-size: 14px;
+    }
+}
+
 `

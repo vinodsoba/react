@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import axios from 'axios';
 
 // stylesheet
 import './style.css'
@@ -24,21 +24,20 @@ class Services extends Component {
         const { data } = this.state;
         console.log(data);
         return (
-            <>
+            <div className="services-section">
                 {
                 data.map(service => service.id === 6 ? 
-                    <div className='services-container' key={service.id}>
-                        <h1>{service.acf.services_title}</h1>
+                
+                     <div className='services-container' key={service.id}>
+                        <div className='service-title' dangerouslySetInnerHTML={{__html: service.acf.services_title }} />
                         <h2>{service.acf.services_description}</h2>
                         <Link className="cta" to={service.acf.services_url}>{service.acf.services_cta_text}<img src={Arrow} alt="arrow" /></Link>
                     </div>
-                     
-                    
+                                                    
                 : null
                 )
                 }
-            </>
-           
+            </div>
         );
     }
 }
