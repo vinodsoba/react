@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1, h2, h3, h4, h5, p, a, button {
+  font-family: 'Manrope', 'san-serif','helvetica';
+}
+
+
+/* Global Variables */
+:root {
+
+  --primary-purple: #881c8c;
+  --secondary-purple: #c687c8;
+
+  --text-primary-light: #000;
+  --text-primary-dark: #fff;
+
+  --text-secondary-light: #151315;
+  --text-secondary-dark: #dddddd;
+
+  --bg-primary-light: #000;
+  --bg-primary-dark: #fff;
+
+  --bg-secondary-light: rgb(160, 153, 153);
+  --bg-secondary-dark: rgb(32, 29, 29);
+
+  --bg-navbar-light: white;
+  --bg-navbar-dark: black;
+
+  --bg-hero-light: #97c1c1;
+  --bg-hero-dark:  #1b4848
+
+}
+
+.light-theme {
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --bg-primary: var(--bg-primary-light);
+  --bg-secodnary: var(--bg-secondary-light);
+  --bg-navbar: var(--bg-navbar-light);
+  --bg-hero: var(--bg-hero-light);
+}
+
+.dark-theme {
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-navbar: var(--bg-navbar-dark);
+  --bg-hero: var(--bg-hero-dark);
+}

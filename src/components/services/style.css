@@ -1,0 +1,76 @@
+.services-container {
+    text-align: left;
+    padding: 50px 0px 40px 20px;
+    height: 100%;
+    
+}
+
+.services-section {
+    padding-left: 70px;
+    padding-right: 70px
+}
+
+.service-title {
+    font-family: Manrope;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+
+}
+
+.services-container h1 {
+    font-family: Manrope;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 1em;
+
+}
+
+.services-container h2 {
+    padding-bottom: 2em;
+    height: 144px;
+    flex-shrink: 0;
+    font-family: Manrope;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px; /* 166.667% */
+}
+
+
+.services-container .cta img {
+    padding-left: 1em;
+}
+
+.services-container a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #000;
+    
+}
+
+.services-container a:hover {
+    animation-name: animation;
+    animation-duration: 4s;
+    transition: all 4s ease;
+}
+
+@keyframes animation {
+    0%   { position: relative; left: 0px}
+    50%  { position: relative; left: 50px;}
+    100% { position: relative; left: 0px;}
+}
+
+@media (max-width: 1280px) {
+    .service-title {
+        font-size: 38px;
+    }
+
+    .services-container h2 {
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+   
+}

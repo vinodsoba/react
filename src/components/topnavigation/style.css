@@ -1,0 +1,5 @@
+.top-nav ul li {
+    color: var(--text-primary);
+    list-style: none;
+    margin-right: 20px;
+}
