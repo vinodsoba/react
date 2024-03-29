@@ -14,6 +14,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Work from './pages/Work';
 import PortfolioDetail from './pages/PortfolioDetail';
+import Services from './pages/Services';
+import ServiceDetail from './pages/ServiceDetail';
+
 
 
 function App() {
@@ -23,6 +26,8 @@ function App() {
           <Header />
           <Routes>
               <Route exact path="/" element={<HomePage />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/services/servicedetail/:id" element={<ServiceDetail />} />
               <Route path="/work" element={<Work/>} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

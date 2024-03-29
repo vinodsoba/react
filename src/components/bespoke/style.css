@@ -43,10 +43,11 @@
     padding-top: 1em;
     font-weight: lighter;
     font-size: 16px;
+    line-height: 1.7;
 
 }
 
-.bespoke-container__content button.cta {
+.bespoke-container__content a.cta {
     width: 202px;
     height: 56px;
     background: #0D9488;
@@ -54,4 +55,9 @@
     color: #fff;
     position: absolute;
     bottom:0;
+}
+
+.bespoke-container__content a.cta:hover {
+    background-color: #000000;
+    color: #fff;
 }

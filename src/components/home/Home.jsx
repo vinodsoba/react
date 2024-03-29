@@ -12,14 +12,11 @@ function Home() {
         <>
         {
             data.map( item => item.id === 6 ?
-                <div>
-                    <p>{item.id}</p>
-                </div>
-                
+                <HeroBanner/>                
             : null
             )
         }
-        <HeroBanner/>
+        
         </>
         
     );

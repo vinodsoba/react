@@ -1,7 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-export default function Services() {
+import useFetchService from '../hooks/use-fetch-service';
+
+function Services() {
+
+  const { data } = useFetchService();
+
+  console.log(data);
   return (
-    <div><h1>Services</h1></div>
+    <div className='header-hero-container'>
+      <>
+      <h1>Services</h1>
+      <ul>
+        {
+          data.map( item =>
+            <li key={item.id}>{item.title.rendered}</li>
+          )
+        }
+      </ul>
+      </>
+    </div>
   )
 }
+
+export default Services;

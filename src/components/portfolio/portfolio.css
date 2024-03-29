@@ -10,3 +10,27 @@
     color: var(--text-primary);
     
 }
+
+.portfolio-container .portfolio-card {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.portfolio-container .portfolio-card a {
+    color: var(--text-primary-light);
+    text-decoration: underline;
+}
+
+.portfolio-container .portfolio-card .card-body h3 {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.port-col-wrap h1 {
+    padding-top:2em;
+    padding-bottom:1em;
+}
+
+.card-img-top {
+    width: 100%;
+}
