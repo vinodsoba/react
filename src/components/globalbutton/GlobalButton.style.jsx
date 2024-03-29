@@ -8,4 +8,7 @@ background: #0D9488;
 border: none;
 margin-left: auto;
 margin-right: auto;
+color: #fff;
+margin-bottom: 1em;
+margin-right: 50px;
 ` 

@@ -3,6 +3,12 @@
     margin-bottom: 1em;
 }
 
+.how-i-work-container a {
+    float: left;
+    color: var(--text-primary-light);
+
+}
+
 .sub-header-title {
     text-align: left;
     padding: 20px 10px;

@@ -1,12 +1,19 @@
-
+import { useContext } from 'react';
 import { FooterContainer } from './Footer.style';
 import FooterBg from './../../assets/img/vs-footer-bg.png';
+import FooterLightBg from './../../assets/img/light-bg.png';
 import { Row, Col, Container } from 'react-bootstrap'
 import FooterLink1 from '../footerlink1/FooterLink1';
+import LinkedInImg  from './../../assets/img/linkedin.png';
+
+import { ThemeContext } from '../../Theme';
+
 
 function Footer() {
+
+    const { theme } = useContext(ThemeContext);
     return ( 
-        <FooterContainer style={{ backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundImage: `url(${FooterBg})`}}>
+        <FooterContainer style={ theme === 'dark-theme' ? { backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundImage: `url(${FooterBg})`} : {backgroundImage: `url(${FooterLightBg})`}}>
             <Row>
                 <Col md={6}>
                     <div className='footer-container'>
@@ -16,14 +23,17 @@ function Footer() {
                 </Col>
                 <Col md={6}>
                     <div className='footer-container__wrapper'>
-                    <h2>GET IN TOUCH</h2>
-                    <a href="mailto:hello@vinodsoba.co.uk">hello@vinodsoba.co.uk</a>
+                        <Row>
+                            <h2>GET IN TOUCH</h2>
+                            <a href="mailto:hello@vinodsoba.co.uk">hello@vinodsoba.co.uk</a>
+                        </Row>
+                    <img src={LinkedInImg} width='20' height='20'/>
                     </div>
                 </Col>
                 <Container>
                     <Row>
                         <h1 style={{ fontSize: '32px', color: '#62FAED' }}>Pages</h1>
-                        <hr style={{ width: '100%', border: '1px #0D9488 solid'}}/>
+                        <hr style={ theme === 'light-theme' ? { width: '100%', border: '1px #ffffff solid' } : { width: '100%', border: '1px #0D9488 solid' } }/>
                         <Col md={4}>
                             <FooterLink1 />
                         </Col>

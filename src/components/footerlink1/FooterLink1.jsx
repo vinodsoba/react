@@ -17,7 +17,7 @@ function FooterLink1() {
         {
             data.map(item =>  
             <ul>
-                <li style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : { color: 'var(--text-primary-dark)'}} key={item.term_id}><Link to={item.url}>{item.title}</Link></li>
+                <li key={item.term_id}><Link style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : { color: 'var(--text-primary)'}} to={item.url}>{item.title}</Link></li>
             </ul>
                
             )

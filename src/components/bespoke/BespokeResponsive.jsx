@@ -62,7 +62,7 @@ const BespokeResponsive = () => {
                         dangerouslySetInnerHTML={{__html: item.acf.bespoke_title}}
                         /></h2>
                         <div dangerouslySetInnerHTML={{__html: item.acf.bespoke_content }} />
-                       <button className='cta'>{item.acf.bespoke_button.cta_text}</button>
+                       <a href={item.acf.bespoke_button.cta_url} className='cta'>{item.acf.bespoke_button.cta_text}</a>
                 </motion.div>
                 </Col>
                 </Row>

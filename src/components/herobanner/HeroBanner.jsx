@@ -19,14 +19,13 @@ import { HeroWrapper } from './HeroBanner.style';
 
 // use Fetch Data
 import useFetchData from '../../hooks/use-fetch-data';
+import { Link } from 'react-router-dom';
 
 
-function HeroBanner( props ) {
+function HeroBanner() {
     const { theme } = useContext(ThemeContext);
 
     const { data } = useFetchData();
-
-    console.log(data);
 
       return (
         <HeroWrapper className='hero-wrapper'>
@@ -52,7 +51,7 @@ function HeroBanner( props ) {
                             </div> 
                         </Col>
                         <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{item.acf.hero_banner_subtitle}</h4></Col>
-                        <Col md={12}><button>{item.acf.button_text}</button></Col>
+                        <Col md={12}><Link className="cta" to="./work">{item.acf.button_text}</Link></Col>
                         <Galaxy />
                     </Row>
                     </div>
