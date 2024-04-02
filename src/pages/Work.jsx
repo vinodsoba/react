@@ -1,43 +1,42 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 // axios to query the API
 import axios from 'axios';
 
 // module
 import Portfolio from '../components/portfolio/Portfolio';
+import { Link } from 'react-router-dom';
+import Container from 'react-bootstrap/esm/Container';
 
-const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages?limit=1";
+import useFetchData from '../hooks/use-fetch-portfolio';
 
-class Work extends Component {
-    state = {  
-        data: [],
-        isLoading: false
-    } 
+function Work() {
 
-    componentDidMount() {
-        axios.get(URL)
-        .then(response => this.setState({
-            data: response.data,
-            isLoading: true
-        }))
-        .catch(err => console.log(err))
-    }
-    render() { 
-        const { data, isLoading } = this.state;
-        console.log(data);
+    const { data } = useFetchData();
+
+    const { isLoading, setisLoading } = useState();
+
+        
+    console.log(data);
         return (
             <>
-                 <div className='header-hero-container'>
-                    { data.map(item => item.id === 61 ? 
-                        <h1 key={item.id}>{item.title.rendered}</h1>  
-                    : null  
-                    )}
-                </div>
+             <div className='header-hero-container'>
+                <h1> My Work</h1>
+                { data.map(item =>  
+                    <h1 key={item.id}>{item.title.rendered}</h1>   
+                )}
+            </div>
+            <Container>
                 <Portfolio />
-            </>
-           
-            
-        );
-    }
+                <div className="port-col-wrap">
+                    <h1>Looking  to start a new project?</h1>
+                    <h4>if you have a project in mind and want some initial advice then email me at <Link to="mailto:hello@vinodsoba.co.uk">hello@vinodsoba.co.uk</Link>. Lets work together and bring your ideas to life!</h4>
+                </div>
+                
+            </Container>
+        
+            </> 
+    );
+    
 }
  
 export default Work;

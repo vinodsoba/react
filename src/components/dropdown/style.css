@@ -1,0 +1,21 @@
+.dropdown-menu {
+    position: absolute;
+    top:60px;
+    left: 0;
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    background-color: var(--bg-primary);
+}
+
+.dropdown-menu ul {
+    display: block !important;
+}
+
+.dropdown-menu ul li {
+    color: var(--text-primary-light);
+    text-decoration: none;
+    list-style: none;
+   
+}

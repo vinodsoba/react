@@ -1,5 +1,7 @@
-.card-img-top {
+.what-i-do .card-img-top {
     margin-left: auto;
     margin-right: auto;
-    width: 34%;
+    width: 50%;
+    height: auto;
+    padding:20px;
 }

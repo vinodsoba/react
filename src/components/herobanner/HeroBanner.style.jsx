@@ -54,7 +54,7 @@ h4 {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.5;
     max-width: 1087px;
     text-align: left;
     height: auto;
@@ -70,7 +70,7 @@ h4 {
     }
 }
 
-button {
+a.cta {
     position: absolute;
     top: 345px;
     right: 1004px;
@@ -78,10 +78,14 @@ button {
     bottom: 84px;
     width: 202px;
     height: 56px;
-    border-radius: 9999px;
     background: #0D9488;
     border: none;
     color: #fff;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media(max-width: 776px) {

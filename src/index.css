@@ -31,3 +31,14 @@ code {
 .header-hero-container h1 {
   color: var(--text-primary)
 }
+
+.header-title {
+  font-size: 36px;
+  text-align: left;
+  padding: 20px 10px 
+}
+
+.port-col-wrap {
+  padding-top:2em;
+  padding-bottom: 2em;
+}

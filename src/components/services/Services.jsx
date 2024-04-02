@@ -14,7 +14,7 @@ class Services extends Component {
      } 
 
      componentDidMount(){
-        axios.get("https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages")
+        axios.get("/wp-json/wp/v2/pages")
         .then(res => this.setState({
             data: res.data,
         }))

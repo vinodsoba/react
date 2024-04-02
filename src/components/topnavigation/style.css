@@ -1,0 +1,14 @@
+.top-nav ul li {
+    color: var(--text-primary);
+    list-style: none;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.top-nav ul li:hover {
+    background-color: rgb(215, 247, 236);
+}
+
+.top-nav ul li a:hover {
+    color: #000;
+}

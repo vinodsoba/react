@@ -4,6 +4,7 @@ import Home from '../components/home/Home';
 import Passionate from '../components/passionate/Passionate';
 import Services from '../components/services/Services';
 import WhatIDo from '../components/whatido/WhatIDo';
+import HowIWork from '../components/howiwork/HowIWork';
 
 // import Theme Provider
 
@@ -16,7 +17,8 @@ const Homepage = () => {
         <BespokeResponsive />
         <Passionate />
         <WhatIDo />
-        <Services />        
+        <Services /> 
+        <HowIWork />       
     </div>
   )
 }

@@ -1,0 +1,19 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.my-form form .fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.my-form form .fieldset .label {
+    padding-right: 20px;
+}
+
+.my-form .fieldset .input {
+    margin-bottom: 20px;
+}

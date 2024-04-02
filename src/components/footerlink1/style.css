@@ -1,0 +1,13 @@
+.footer-links ul {
+    padding: 0;
+}
+
+.footer-links li {
+    list-style: none;
+    text-align: left;
+}
+
+.footer-links li a {
+    color: var(--text-primary);
+    text-decoration: none;
+}

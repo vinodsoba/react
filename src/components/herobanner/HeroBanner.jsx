@@ -4,9 +4,6 @@ import { motion } from 'framer-motion'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-// import axios
-import axios from 'axios';
-
 // import style
 import './style.css';
 
@@ -18,38 +15,26 @@ import Galaxy from '../galaxy/Galaxy';
 // import stars backgorund
 import StarBackground from './../../assets/img/bg-stars.png';
 
-
 import { HeroWrapper } from './HeroBanner.style';
 
+// use Fetch Data
+import useFetchData from '../../hooks/use-fetch-data';
+import { Link } from 'react-router-dom';
 
 
-// axios fetch url
-const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages";
-
- function HeroBanner( props ) {
+function HeroBanner() {
     const { theme } = useContext(ThemeContext);
-    const [ post, setPost ] = useState([]);
-    const [ isLoading, setIsLoading ] = useState(false);
 
-    React.useEffect(() => {
-        axios.get(URL).then((response) => {
-            setPost(response.data);
+    const { data } = useFetchData();
 
-        });
-
-        setIsLoading(true);
-    }, []);
-
-    if(!post) return null;
-
-    if(isLoading){
-      
       return (
         <HeroWrapper className='hero-wrapper'>
             {
-                post.map( image => image.id === 6 ? 
-          
-                <div key={image.id} className={image.acf.choose_background_colour}>
+                data.map( item => item.id === 530 ? 
+                   
+                <div key={item.id} className={item.acf.choose_background_colour}>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>  
+                 </div> 
                     <div style={theme === 'light-theme' ? { background: 'rgb(110 176 239)', height: '100%' }  : {height: '100%', backgroundImage: `url(${StarBackground})`} }>
                     <Row>
                         <Col md={12}>
@@ -60,13 +45,13 @@ const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages";
                                 initial={{ x: '-100vw' }}
                                 animate={{ x:  0 }} 
                                 transition={{ type: 'ease', duration: 0.5, delay: 0.1 }}
-                                dangerouslySetInnerHTML={{__html: image.acf.hero_banner_title}}>
+                                dangerouslySetInnerHTML={{__html: item.acf.hero_banner_title}}>
                                 </motion.div>
                                 </h1>
                             </div> 
                         </Col>
-                        <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{image.acf.hero_banner_subtitle}</h4></Col>
-                        <Col md={12}><button>{image.acf.cta_text}</button></Col>
+                        <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{item.acf.hero_banner_subtitle}</h4></Col>
+                        <Col md={12}><Link className="cta" to="./work">{item.acf.button_text}</Link></Col>
                         <Galaxy />
                     </Row>
                     </div>
@@ -74,13 +59,8 @@ const URL = "https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages";
                 : null
                 )
             }      
-          </HeroWrapper> 
+        </HeroWrapper> 
       )
-    } else {
-      return <div>Loading...</div>
-    }
-
-  
 }
 
 export default HeroBanner;

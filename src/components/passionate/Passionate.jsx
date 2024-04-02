@@ -1,45 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
+
+import { ThemeContext } from '../../Theme';
+
+import useFetchData from '../../hooks/use-fetch-data';
+import { PassionateContainer } from './PassionateWrapper';
 
 import './style.css';
 
 function Passionate() {
+    const { theme } = useContext(ThemeContext);
+    const { data } = useFetchData();
 
-    const [ data, setData ] = useState([]);
-
-    const fetchData = async () => {
-        try{
-            const response = await axios.get("https://dev.vinodsoba.co.uk/wp-json/wp/v2/pages");
-            setData(
-               response.data, 
-            );
-        } catch (error) {
-            console.error("Error fetching data", error );
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-    }, []);
-
-    console.log(data);
   return (
-    <div>
+    <PassionateContainer>
         {
-            data.map(item => item.id === 6 ? 
-            <div className='passionate-wrapper' style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundImage: `url(${item.acf.select_background_type.image.url})` }}>
+            data.map(item => item.id === 530 ?
+            <div className='passionate-wrapper' style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundImage: `url(${item.acf.passionate_image})` }}>
                <div className='passionate-container__background'>
-                <p>{item.acf.passionate_title}</p>
-                <h2 key={item.id}>{item.acf.title_h2}</h2>
-                <Link className="cta" to={item.acf.cta_button.cta_link}>{item.acf.cta_button.cta_text}</Link>
+                <p style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} }>{item.acf.passionate_title}</p>
+                <h2 style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} } key={item.id}>{item.acf.title_h2}</h2>
+                <Link className="cta" to={item.acf.button_cta_link}>{item.acf.button_cta_text}</Link>
                </div>
                 
             </div>
             : null
             )
         }
-    </div>
+    </PassionateContainer>
   )
 }
 

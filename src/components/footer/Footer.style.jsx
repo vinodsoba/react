@@ -31,5 +31,13 @@ text-align: left;
     max-width: 497px;
     text-align: left;
     padding-left: 50px;
+     a {
+         color: var(--text-primary-dark);
+     }
+
+     img {
+        margin-left: 13px;
+        margin-top: 22px;
+     }
 }
 `;
