@@ -36,14 +36,13 @@ function PortfolioDetail() {
     <>
       <div className='header-hero-container'>
         <Row>
-          <h1>Portfolio Detail</h1>     
+            <h1>{data.title}</h1>  
         </Row>
       </div>
       <Container>
         <Row>
           <Col md={6}>
           <h1>{data.portfolioTitle}</h1>
-          <h4 key={data.id}>{data.title}</h4>
           <div dangerouslySetInnerHTML={{__html: data.portfolioContent}} />
           </Col>
           <Col md={6}>

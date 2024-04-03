@@ -41,7 +41,7 @@ h1 {
     text-align: left;
     padding: 20px 10px 20px 20px;
     max-width: 979px;
-    height: 151px;
+    height: 94px;
     flex-shrink: 0;
 
     @media(max-width: 768px){
@@ -59,7 +59,7 @@ h4 {
     text-align: left;
     height: auto;
     flex-shrink: 0;
-    padding: 40px 10px 20px 20px;
+    padding: 0px 10px 20px 20px;
 
     @media (max-width: 1425px){
         max-width: 675px;
@@ -72,7 +72,7 @@ h4 {
 
 a.cta {
     position: absolute;
-    top: 345px;
+    top: 232px;
     right: 1004px;
     left: 33px;
     bottom: 84px;

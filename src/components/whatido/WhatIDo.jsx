@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import CardItem from '../card/CardItem';
 // style
-import './style.css'
+import { WhatIDoWrapper } from './WhatIDo.style';
 // axios
 import useFetchData  from '../../hooks/use-fetch-data';
 
@@ -51,7 +51,8 @@ function WhatIDo(props) {
 
    
   return (
-    <Container>
+    <WhatIDoWrapper>
+        <Container>
         <div className='what-i-do'>
          {
             data.map(item => item.id === 530 ? 
@@ -64,6 +65,9 @@ function WhatIDo(props) {
         )}
         </div>
     </Container>
+
+    </WhatIDoWrapper>
+    
   )
 }
 
