@@ -7,6 +7,8 @@ export const HeaderWrapper = styled.div`
     font-size: 2em;
     font-weight: semi-bold;
     color: var(--text-primary);
+    display: flex;
+    align-items: center;
 }
 
 .row {
@@ -16,6 +18,10 @@ export const HeaderWrapper = styled.div`
 
 .header-container {
     background-color: var(--bg-navbar);
+    height: 103px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 ` 

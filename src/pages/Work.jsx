@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // axios to query the API
 import axios from 'axios';
 
@@ -9,23 +9,14 @@ import Container from 'react-bootstrap/esm/Container';
 
 import useFetchData from '../hooks/use-fetch-portfolio';
 
-function Work() {
-
-    const { data } = useFetchData();
-
-    const { isLoading, setisLoading } = useState();
-
-        
-    console.log(data);
+function Work() {   
         return (
             <>
              <div className='header-hero-container'>
                 <h1> My Work</h1>
-                { data.map(item =>  
-                    <h1 key={item.id}>{item.title.rendered}</h1>   
-                )}
             </div>
             <Container>
+                
                 <Portfolio />
                 <div className="port-col-wrap">
                     <h1>Looking  to start a new project?</h1>

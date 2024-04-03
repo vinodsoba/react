@@ -6,7 +6,15 @@
 .how-i-work-container a {
     float: left;
     color: var(--text-primary-light);
+    text-decoration: none;
+    transition: margin-left 0.4s;
+    padding-bottom: 3em;
 
+}
+
+
+.how-i-work-container a:hover {
+    margin-left: 5px;
 }
 
 .sub-header-title {

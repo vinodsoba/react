@@ -32,6 +32,7 @@ function ServiceDetail() {
       myServices: response.data.content.rendered,
       headerTitle: response.data.acf.header_title,
       homePageBanner: response.data.acf.home_page_banner,
+      servicesContent: response.data.acf.my_services,
     })
     )
     
@@ -48,11 +49,12 @@ function ServiceDetail() {
           <h2><div dangerouslySetInnerHTML={{__html: data.headerTitle}} /></h2>
           <Row>
           <Col md={6}>
-            <img src={data.homePageBanner} width="300" height="300" alt={data.HeaderTitle}/>
+            <img src={data.homePageBanner} width="100%"  alt={data.HeaderTitle}/>
           </Col>
           <Col md={6}>
           <div className='service-detail'>
               <div dangerouslySetInnerHTML={{__html: data.myServices}} />
+              <div dangerouslySetInnerHTML={{__html: data.servicesContent }} />
           </div>
           </Col>
           </Row>
