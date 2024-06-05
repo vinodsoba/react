@@ -49,7 +49,7 @@ function CardItem() {
             </Col>
             )
             }    
-            <div className="cta-container"><GlobalButton /></div>  
+            <GlobalButton />
         </>
     )
 }

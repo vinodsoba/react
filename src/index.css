@@ -43,6 +43,19 @@ code {
   padding-bottom: 2em;
 }
 
+.cta {
+  width: 234px;
+  height: 57px;
+  flex-shrink: 0;
+  background: #0D9488;
+  padding-top: 12px;
+  padding-bottom: 17px;
+  padding-left:24px;
+  padding-right: 23px;
+  color: #fff;
+  border-radius: 33px;
+}
+
 a.cta:hover {
   background: black;
 }

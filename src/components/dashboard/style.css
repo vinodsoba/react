@@ -1,0 +1,12 @@
+.dashboard-header {
+    background-color: black;
+}
+
+.dashboard-header .menu-toggle {
+    color: #fff;
+    cursor: pointer;
+}
+
+.col-md-2,  .col-md-10 {
+    padding: 0;
+}

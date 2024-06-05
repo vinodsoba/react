@@ -2,12 +2,14 @@ import  React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-// bootstrap
+// bootstrap 
 import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import { Col, Row } from 'react-bootstrap';
+
 
 import { ServiceDetailWrapper } from './Servicedetail.style';
+import Layout from '../components/layout/Layout';
+
 
 function ServiceDetail() {
   const { id } = useParams();
@@ -15,8 +17,8 @@ function ServiceDetail() {
 
   let base64 = require("base-64");
 
-  const username = 'admin';
-  const password = 'TdwV yZH8 TfyE 4O53 N4Cg 9td2';
+  const username = `${process.env.REACT_APP_API_USERNAME}`;
+  const password = `${process.env.REACT_APP_API_PASSWORD}`;
   
   useEffect(() => {
     axios.get(`/wp-json/wp/v2/service/${id}`, {
@@ -40,7 +42,8 @@ function ServiceDetail() {
  
     console.log(data);
   return (
-    <ServiceDetailWrapper>
+      <Layout>
+         <ServiceDetailWrapper>
       <div className='header-hero-container' style={{ backgroundImage: `url(${data.homePageBanner})`}}>
           <h1>{data.title}</h1> 
       </div>
@@ -60,8 +63,8 @@ function ServiceDetail() {
           </Row>
         </Container>
       </section>
-      
-    </ServiceDetailWrapper>   
+    </ServiceDetailWrapper>
+      </Layout>      
   )
 }
 

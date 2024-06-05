@@ -1,8 +1,17 @@
+.top-nav ul p {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    right: 60px;
+    top:30px;
+    padding: 5px;
+}
+
 .top-nav ul li {
     color: var(--text-primary);
     list-style: none;
     margin-right: 20px;
-    border-radius: 5px;
+    border-radius: 29px;
 }
 
 .top-nav ul li:hover {
@@ -11,4 +20,9 @@
 
 .top-nav ul li a:hover {
     color: #000;
+}
+
+.signup-btn {
+    background-color: blue;
+    padding: 3px 0px;
 }

@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
-
-
 export const HeroWrapper = styled.div`
+
+.herobanner-cont {
+    padding-top: 126px;
+}
+
 width: 100%;
 height: 599px;
 position: relative;
@@ -39,9 +42,9 @@ h1 {
     font-weight: 600;
     line-height: normal;
     text-align: left;
-    padding: 20px 10px 20px 20px;
+    padding: 20px 10px 20px 0px;
     max-width: 979px;
-    height: 94px;
+    height: 171px;
     flex-shrink: 0;
 
     @media(max-width: 768px){
@@ -55,11 +58,11 @@ h4 {
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
-    max-width: 1087px;
+    max-width: 888px;
     text-align: left;
     height: auto;
     flex-shrink: 0;
-    padding: 0px 10px 20px 20px;
+    padding: 0px 10px 63px 0px;
 
     @media (max-width: 1425px){
         max-width: 675px;
@@ -71,11 +74,6 @@ h4 {
 }
 
 a.cta {
-    position: absolute;
-    top: 232px;
-    right: 1004px;
-    left: 33px;
-    bottom: 84px;
     width: 202px;
     height: 56px;
     background: #0D9488;
@@ -86,6 +84,7 @@ a.cta {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 29px;
 }
 
 @media(max-width: 776px) {

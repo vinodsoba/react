@@ -13,7 +13,7 @@
     height: 100%;
     color: #000;
     font-family: Manrope;
-    font-size: 20px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -50,15 +50,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 202px;
-    height: 56px;
+    width: 170px;
+    height: 44px;
     background: #0D9488;
     border: none;
     color: #fff;
     position: absolute;
-    bottom:0;
+    /*bottom:0;*/
     text-decoration: none;
     transition: margin-left 0.2s;
+    border-radius: 29px;
 }
 
 .bespoke-container__content a.cta:hover {

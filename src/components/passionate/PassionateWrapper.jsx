@@ -63,16 +63,4 @@ export const PassionateContainer = styled.div `
 
 }
 
-.passionate-wrapper .cta {
-    width: 234px;
-    height: 57px;
-    flex-shrink: 0;
-    background: #0D9488;
-    padding-top: 12px;
-    padding-bottom: 17px;
-    padding-left:24px;
-    padding-right: 23px;
-    color: #fff;
-}
-
 `;

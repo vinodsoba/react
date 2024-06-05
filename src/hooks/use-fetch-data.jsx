@@ -4,15 +4,16 @@ import axios from 'axios';
 
 function useFetchData() {
     const [ data, setData ] = useState([]);
-    const [ loading, setLoading ] = useState(true);
+    const [ loading, setLoading ] = useState(false);
 
     let base64 = require('base-64');
 
-    const username = 'admin';
-    const password = 'TdwV yZH8 TfyE 4O53 N4Cg 9td2';
+    const username = `${process.env.REACT_APP_API_USERNAME}`;
+    const password = `${process.env.REACT_APP_API_PASSWORD}`;
 
     useEffect(() => {        
         const fetchData = async () =>  {
+            setLoading(true);
             try {
                 const {data: response } = await axios.get(
                     "/wp-json/wp/v2/pages?per_page=15",

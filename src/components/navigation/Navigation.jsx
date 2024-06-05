@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { NavigationWrapper } from "./Navigation.style";
 import TopNavigation from '../topnavigation/TopNavigation';
 
-function Navigation() {  
+function Navigation({ authUser }) {  
     return ( 
         <NavigationWrapper>
-            <TopNavigation />
+            <TopNavigation authUser={authUser}/>
         </NavigationWrapper>
      );
 }

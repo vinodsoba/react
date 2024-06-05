@@ -1,0 +1,8 @@
+.courses .course--content {
+    text-align: left;
+    padding: 20px;
+}
+
+.courses .course--content p {
+    padding-top: 10px;
+}
