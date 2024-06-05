@@ -5,6 +5,7 @@ import Passionate from '../components/passionate/Passionate';
 import Services from '../components/services/Services';
 import WhatIDo from '../components/whatido/WhatIDo';
 import HowIWork from '../components/howiwork/HowIWork';
+import Layout from '../components/layout/Layout';
 
 // import Theme Provider
 
@@ -12,14 +13,14 @@ import HowIWork from '../components/howiwork/HowIWork';
 const Homepage = () => {
 
   return (
-    <div>
-        <Home />
+    <Layout>
+       <Home />
         <BespokeResponsive />
         <Passionate />
         <WhatIDo />
         <Services /> 
-        <HowIWork />       
-    </div>
+        <HowIWork />   
+    </Layout>
   )
 }
 

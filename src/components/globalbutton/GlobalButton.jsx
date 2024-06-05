@@ -21,7 +21,7 @@ function GlobalButton () {
         <>
         {
             data.map(item => 
-                <ButtonWrapper className="button-cta" data-id={item.id} onClick={handleclick}>Learn More</ButtonWrapper>  
+                <ButtonWrapper className="cta" data-id={item.id} onClick={handleclick}>Learn More</ButtonWrapper>  
             )
         }
          

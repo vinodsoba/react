@@ -1,0 +1,27 @@
+input.email-input-field {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 954px;
+    font-size: 20px;
+    height: 91px;
+    margin-bottom: 44px;
+}
+
+.custom-form p {
+    font-size: 40px;
+}
+
+button.cta {
+    margin-bottom: 44px;
+}
+
+.custom-form button.cta {
+    border-radius: 17px;
+    border: none;
+    max-width: 941px;
+    width: 100%;
+}

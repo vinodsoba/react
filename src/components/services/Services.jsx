@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 // icon
 import Arrow from './../../assets/img/icon/Arrow 1.svg'
 
+
 class Services extends Component {
     state = { 
         data: []
@@ -24,7 +25,7 @@ class Services extends Component {
         const { data } = this.state;
         console.log(data);
         return (
-            <div className="services-section">
+             <div className="services-section">
                 {
                 data.map(service => service.id === 6 ? 
                 

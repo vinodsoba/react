@@ -35,9 +35,15 @@ text-align: left;
          color: var(--text-primary-dark);
      }
 
-     img {
-        margin-left: 13px;
-        margin-top: 22px;
+     .social-icons {
+        display: flex;
+        
+        img {
+            
+            margin-top: 22px;
+         }
      }
+
+    
 }
 `;
