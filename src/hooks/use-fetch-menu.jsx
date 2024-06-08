@@ -19,6 +19,7 @@ function useFetchMenu() {
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
+                            mode: 'no-cors'
                         }
                     })
                     
