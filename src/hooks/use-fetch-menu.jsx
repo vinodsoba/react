@@ -15,11 +15,11 @@ function useFetchMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "http://localhost/vs/wp-json/wp/v2/footer-links",
+                    "/wp-json/wp/v2/footer-links",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
-                            mode: 'cors',
+                            mode: 'no-cors',
                             'Content-Type': 'application/json',
                             'Access-Control-Allow-Origin':'*'
                     },
