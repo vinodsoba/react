@@ -15,13 +15,15 @@ function useFetchMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "https://react-phi-ruby-99.vercel.app/https://www.vinodsoba.co.uk/wp-json/wp/v2/footer-links",
+                    "http://localhost/vs/wp-json/wp/v2/footer-links",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
                             mode: 'cors',
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin':'*'
+                            'Access-Control-Allow-Origin':'*',
+                            'Access-Control-Allow-Methods' : "POST, GET, OPTIONS, DELETE, PUT",
+                            'Access-Control-Allow-Headers' : "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
                     },
                         body: JSON.stringify(data)
                     })
