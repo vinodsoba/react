@@ -15,7 +15,7 @@ function useFetchMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "https://www.vinodsoba.co.uk/wp-json/wp/v2/footer-links",
+                    "https://react-phi-ruby-99.vercel.app/wp-json/wp/v2/footer-links",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
