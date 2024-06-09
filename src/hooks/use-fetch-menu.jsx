@@ -21,7 +21,7 @@ function useFetchMenu() {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
                            
                     },
-                        body: JSON.stringify(response.data)
+                        body: JSON.stringify(data)
                     })
                     
                 setData(response);    
