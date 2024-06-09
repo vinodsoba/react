@@ -19,11 +19,7 @@ function useFetchMenu() {
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
-                            mode: 'cors',
-                            'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin':'*',
-                            'Access-Control-Allow-Methods' : "POST, GET, OPTIONS, DELETE, PUT",
-                            'Access-Control-Allow-Headers' : "x-requested-with, Content-Type, origin, authorization, accept, client-security-token"
+                           
                     },
                         body: JSON.stringify(data)
                     })
