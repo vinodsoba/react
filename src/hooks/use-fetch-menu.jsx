@@ -8,8 +8,8 @@ function useFetchMenu() {
 
     let base64 = require("base-64"); // install it before use from npm i base-64
 
-    const username = `${process.env.REACT_APP_API_USERNAME}`;
-    const password = `${process.env.REACT_APP_API_PASSWORD}`;
+    const username = "admin";
+    const password = "TdwV yZH8 TfyE 4O53 N4Cg 9td2";
 
     useEffect(() => {        
         const fetchData = async () =>  {
