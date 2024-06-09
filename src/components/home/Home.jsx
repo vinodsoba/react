@@ -1,7 +1,26 @@
-import React from 'react'
+import React from 'react';
 
-export default function Home() {
-  return (
-    <div>Home</div>
-  )
+import HeroBanner from '../herobanner/HeroBanner';
+
+import useFetchData from '../../hooks/use-fetch-data';
+
+function Home() {
+    const { data } = useFetchData();
+    
+    console.log(data);
+    return (
+        <>
+        {
+            data.map( item => item.id === 6 ?
+                <HeroBanner/>                
+            : null
+            )
+        }
+        
+        </>
+        
+    );
+
 }
+ 
+export default Home;
