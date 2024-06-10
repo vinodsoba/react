@@ -16,7 +16,7 @@ function useFetchData() {
             setLoading(true);
             try {
                 const {data: response } = await axios.get(
-                    "/wp-json/wp/v2/pages?per_page=15",
+                    "http://localhost/vs/wp-json/wp/v2/pages?per_page=15",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ':' + password),
