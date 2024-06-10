@@ -10,7 +10,7 @@ function useFetchPosts() {
     const username = `${process.env.REACT_APP_API_USERNAME}`;
     const password = `${process.env.REACT_APP_API_PASSWORD}`;
 
-    const URL = '/wp-json/wp/v2/posts';
+    const URL = 'http://localhost/vs/wp-json/wp/v2/posts';
 
     const fetchPosts = async () => {
         try {

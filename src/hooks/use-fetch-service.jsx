@@ -15,7 +15,7 @@ function useFetchData() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "/wp-json/wp/v2/service",
+                    "http://localhost/vs/wp-json/wp/v2/service",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ':' + password),
