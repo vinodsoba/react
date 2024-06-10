@@ -10,7 +10,7 @@ function useFetchMedia() {
     useEffect(() => {        
         const fetchData = async () =>  {
             try {
-                const {data: response } = await axios.get("/wp-json/wp/v2/media");
+                const {data: response } = await axios.get("http://localhost/vs/wp-json/wp/v2/media");
                 setData(response);    
             } catch (error) {
                 console.log(error.message)

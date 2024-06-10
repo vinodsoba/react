@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-
 import axios from 'axios';
-
-
 
 function useFetchHeaderMenu() {
     const [ data, setData ] = useState([]);
@@ -17,7 +14,7 @@ function useFetchHeaderMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "/wp-json/wp/v2/header-main-menu",
+                    "http://localhost/vs/wp-json/wp/v2/header-main-menu",
                 {
                     headers: {
                         Authorization: "Basic " + base64.encode(username + ":" + password),
