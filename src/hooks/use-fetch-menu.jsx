@@ -15,12 +15,10 @@ function useFetchMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "/wp-json/wp/v2/footer-links",
+                    "https://www.vinodsoba.co.uk/wp-json/wp/v2/footer-links",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
-                           mode: "cors",
-                           "Content-Type" : "application/x-www-form-urlencoded; charset=UTF-8"
                     },
                         body: JSON.stringify(data)
                     })
