@@ -5,7 +5,6 @@ import './style.css'
 
 const CourseBuildGame = () => {
   const [ data, setData ] = useState([]);
-
     const { id }  = useParams();
 
     let base64 = require('base-64');
@@ -22,6 +21,7 @@ const CourseBuildGame = () => {
     .then((response) => setData({
         data: response.data,
         id: response.data.id,
+        title: response.data.title.rendered,
         content: response.data.content.rendered,
     }) 
     ).catch((err) => {console.log('error', err)})
@@ -31,7 +31,7 @@ const CourseBuildGame = () => {
    if(!data){ return null }
   return (
     <div className="courses-container">
-      <h1>Build a game</h1>
+      <h1>{data.title}</h1>
       <div className='courses'>
       <div className="course--content" dangerouslySetInnerHTML={{__html: data.content}} />
       </div>

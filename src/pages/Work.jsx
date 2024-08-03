@@ -16,8 +16,7 @@ function Work() {
                     <Portfolio />              
                 </Container>
                 <CallToAction /> 
-            </Layout>
-              
+            </Layout>     
             
     );
     

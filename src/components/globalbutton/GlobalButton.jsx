@@ -6,12 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 function GlobalButton () {
     const { data } = useFetchData();
-
     const history = useNavigate();
-
     const handleclick = (event) => {
-
-        const id = event.currentTarget.dataset.id;
+        
+    const id = event.currentTarget.dataset.id;
 
         history(`/services/servicedetail/${id}`);
 
@@ -24,7 +22,6 @@ function GlobalButton () {
                 <ButtonWrapper className="cta" data-id={item.id} onClick={handleclick}>Learn More</ButtonWrapper>  
             )
         }
-         
         </>
     );  
 }

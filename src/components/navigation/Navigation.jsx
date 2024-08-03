@@ -2,10 +2,14 @@ import React, { useContext } from 'react'
 import { NavigationWrapper } from "./Navigation.style";
 import TopNavigation from '../topnavigation/TopNavigation';
 
-function Navigation({ authUser }) {  
+function Navigation({ authUser, setShowSideBar, showSideBar }) {  
     return ( 
         <NavigationWrapper>
-            <TopNavigation authUser={authUser}/>
+            <TopNavigation 
+            setShowSideBar={setShowSideBar}
+            showSideBar={showSideBar}
+            authUser={authUser}
+            />
         </NavigationWrapper>
      );
 }

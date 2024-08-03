@@ -1,23 +1,33 @@
 import React, { useRef, useEffect } from 'react'
 
 const Canvas = props => {
-  const context = useRef(null);
+  
+  const canvasRef = useRef(null)
+
+  const draw = (ctx) => {
+    ctx.fillStyle = 'red'
+    ctx.beginPath()
+    ctx.arc(50, 100, 20, 0, 2*Math.PI)
+    ctx.fill()
+
+    ctx.fillStyle = 'black'
+    ctx.beginPath()
+    ctx.arc(150, 100, 10, 1, 2*Math.PI)
+    ctx.fill()
+
+  }
+
+  
 
   useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext('2d');
+    
+    draw(context)
 
-  }, [])
+  }, [draw])
   
- const beginDraw = () =>{}
- const draw = () => {}
- const stopDraw = () => {}
-  
-  return (
-    <canvas 
-    onMouseUp={beginDraw}
-    onMouseDown={draw}
-    onMouseOut={stopDraw}
-    />
-  )
+  return <canvas ref={canvasRef} {...props}/>
 }
 
 export default Canvas

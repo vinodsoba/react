@@ -14,8 +14,8 @@ function useFetchMenu() {
     useEffect(() => {        
         const fetchData = async () =>  {
             try {
-                const {data: response } = await axios.get(
-                    "https://www.vinodsoba.co.uk/wp-json/wp/v2/footer-links",
+                const { data: response } = await axios.get(
+                    "/wp-json/wp/v2/footer-links",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ":" + password),
@@ -26,14 +26,14 @@ function useFetchMenu() {
     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
 
                     },
-                        body: JSON.parse(data)
-                    })
+                    body: JSON.stringify(data)
+                        
+                    });
                     
                 setData(response);    
             } catch (error) {
                 console.log(error.message)
             }
-
             setLoading(false);
         }
 

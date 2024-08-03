@@ -1,20 +1,19 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
 import DashboardCourses from '../../pages/DashboardCourses';
-
+import Setting from '../settings/Setting';
 
 function PrivateComponent(){
     const user = localStorage.getItem('user');
     
-    if(user ){
-      return <DashboardCourses />
+    if(user){
+      return  <DashboardCourses /> 
     } else if (!user){
       return <Navigate to='/login'/>
-    }
-    else {
-      return <DashboardCourses />
+    } else {
+      return <Setting />
     }
   
 }
 
-export default PrivateComponent
+export default PrivateComponent 

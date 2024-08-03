@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const WhatIDoWrapper = styled.div`
-background-color: #000;
+background-color: #fff;
 
 .what-i-do .card-img-top {
     margin-left: auto;

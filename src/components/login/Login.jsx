@@ -1,10 +1,10 @@
 import React from 'react'
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../redux/slice/authSlice';
-import axios from 'axios';
-import Layout from '../layout/Layout';
+import { useFormik } from 'formik'
+import * as Yup from 'yup'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/slice/authSlice'
+import axios from 'axios'
+import Layout from '../layout/Layout'
 
 import './style.css'
 
@@ -41,7 +41,7 @@ const Login = () => {
                 console.log('response', res);
                 if(res.status === 200 && res.statusText === "OK"){
                     localStorage.setItem('user', JSON.stringify(res.data));
-                    window.location='http://localhost:3001/dashboard';
+                    window.location='http://localhost:3000/dashboard';
                 }
             })
             .catch((error) => { 
