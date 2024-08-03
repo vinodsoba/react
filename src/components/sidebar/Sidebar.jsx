@@ -23,10 +23,12 @@ function Sidebar() {
         <Link to="/dashboard"><FontAwesomeIcon 
         style={{ color: '#fff', fontSize: "22px"}}
         icon={faHome} /></Link>
-        <FontAwesomeIcon 
+         <Link to="/dashboard/settings">
+         <FontAwesomeIcon 
         style={{ color: '#fff', fontSize: "22px"}}
         icon={faCog} />
-        <Link 
+         </Link>
+        <Link className='text-black' 
         onClick={() => dispatch(logout())}>
         Logout
         </Link>

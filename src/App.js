@@ -23,9 +23,14 @@ import Subscription from './components/subscribe/Subscription';
 import NotFound from './components/notfound/NotFound';
 import DashboardCourses from './pages/DashboardCourses';
 import PrivateComponent from './components/privatecomponent/PrivateComponent';
+import Setting from './components/settings/Setting';
+import PrivateSetting from './components/privatesetting/PrivateSetting';
+import SideMenu from './components/sidemenu/SideMenu';
+import TopNavigation from './components/topnavigation/TopNavigation';
+
+
 
 function App() {
-
   const [isLoggedIn, setIsLoggedIn ] = useState(false)
 
   //c
@@ -33,6 +38,7 @@ function App() {
   const { theme } = useContext(ThemeContext)
   return (
         <div className={`App ${theme}`}>
+          
           <Routes>
               <Route exact path="/" element={<HomePage />} />
               <Route path="/services" element={<Services />} />
@@ -46,12 +52,18 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/work/portfoliodetail/:id" element={<PortfolioDetail />} />
               <Route path="/test" element={<Test />} />
+              
               <Route element={<PrivateComponent />}>
-                <Route path="/dashboard/courses/:id" element={<DashboardCourses />} />
-                </Route>
-                <Route element={<PrivateRoutes/>}>
+                <Route path="/dashboard/courses/:id" element={<DashboardCourses />} />                
+              </Route>
+
+              <Route element={<PrivateSetting/>}>
+                <Route path="/dashboard/settings" element={<Setting />} />
+              </Route>
+                
+              <Route element={<PrivateRoutes/>}>
                   <Route path="/dashboard" element={<Dashboard />} />
-                </Route>
+              </Route>
               <Route path="/subscription" element={<Subscription />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

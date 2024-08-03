@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const HeaderWrapper = styled.div`
+.sidemenu {
+display: none;
+}
 .my-logo {
     text-align: left;
     padding: 34px 0 0 20px;
@@ -22,6 +25,11 @@ export const HeaderWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .nav-bar-icon {
+        display: flex;
+        justify-content: flex-start;
+    }
 }
 
 ` 

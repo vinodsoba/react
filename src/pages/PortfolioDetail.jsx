@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 
 // import axios
 import axios from 'axios';
+import Layout from '../components/layout/Layout';
 
 function PortfolioDetail() {
     const { id } = useParams();
@@ -31,9 +32,8 @@ function PortfolioDetail() {
         }))
         
     }, [])
-    console.log(data);
   return (
-    <>
+    <Layout>
       <div className='header-hero-container'>
         <Row>
             <h1>{data.title}</h1>  
@@ -50,7 +50,7 @@ function PortfolioDetail() {
           </Col>
         </Row>
       </Container>            
-    </>
+    </Layout>
     
   )
 }

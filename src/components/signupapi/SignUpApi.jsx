@@ -11,8 +11,7 @@ function SignUpAPI(props){
         formData.append('email', props.APIDetailsSignUp.email)
         formData.append('pass', props.APIDetailsSignUp.pass)
 
-
-            const url = 'http://localhost/vs/reg.php'
+            const url = 'http://localhost/vs/reg.php';
             fetch(url, {
                 method: 'POST',
                 body: formData

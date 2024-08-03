@@ -14,7 +14,7 @@ function useFetchHeaderMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "http://localhost/vs/wp-json/wp/v2/header-main-menu",
+                    "/wp-json/wp/v2/header-main-menu",
                 {
                     headers: {
                         Authorization: "Basic " + base64.encode(username + ":" + password),
