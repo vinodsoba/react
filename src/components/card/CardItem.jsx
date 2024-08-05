@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import useFetchData from '../../hooks/use-fetch-service';
+import useFetchData from '../../hooks/use-fetch-posts';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import { motion, useAnimation } from 'framer-motion';

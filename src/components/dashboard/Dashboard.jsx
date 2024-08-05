@@ -13,7 +13,7 @@ const DashBoard = () => {
     //const [openMenu, setOpenMenu ] = useState(false);
     const [ closeMenu, setCloseMenu ] = useState(false);
 
-    const { data  } = useFetchPosts();
+    const {  data  } = useFetchPosts();
 
     const history = useNavigate();
 
@@ -46,7 +46,6 @@ const DashBoard = () => {
                         icon={faBars} 
                         style={{ color: '#fff', fontSize: '22px'}}
                         onClick={() => setCloseMenu(!closeMenu)}
-                        
                         />
                         {closeMenu ? <DropdownMenu/> : null }
                         </div></Col>
@@ -57,24 +56,24 @@ const DashBoard = () => {
                 </div>
                 <Container>
                     <Row>
-                    <Col md={12}>
+                    <Col md={6}>
                         <h2>Hi {user.user_display_name}</h2>   
                     </Col>
+                    <Col md={6}>{ } </Col>
                     {
-                       data.map( index  => index ?  (
-                           
-                                <Col md={3}>
-                                <Card>
-                                    <CardHeader>Create Game</CardHeader>
-                                    <CardBody>
-                                        <h4>Some text goes here</h4>
-                                    </CardBody>
-                                    <CardFooter>
-                                        <p  className="cta" onClick={handleclick} data-id={index.id} key={index.id}>View Course</p></CardFooter>
-                                </Card>
-                                </Col>   
+                       data.map( (index)  =>  (
+                        <Col md={3}>
+                            <Card>
+                                <CardHeader><h4>{index.title.rendered}</h4></CardHeader>
+                                <CardBody>
+                                   <div dangerouslySetInnerHTML={{__html:  index.excerpt.rendered.length > 50 ? `${index.excerpt.rendered.substring(0, 50 )}` : index.excerpt.rendered }}/>
+                                </CardBody>
+                                <CardFooter>
+                                    <button className="btn btn-dark" onClick={handleclick} data-id={index.id} key={index.id}>View Course</button></CardFooter>
+                            </Card>
+                        </Col>   
                             
-                        ) : null )
+                        ))
                     } 
                     </Row>
                 </Container>

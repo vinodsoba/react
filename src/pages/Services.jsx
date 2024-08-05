@@ -1,6 +1,7 @@
 import React from 'react';
 
 import useFetchService from '../hooks/use-fetch-service';
+import Layout from '../components/layout/Layout';
 
 function Services() {
 
@@ -8,8 +9,8 @@ function Services() {
 
   console.log(data);
   return (
-    <div className='header-hero-container'>
-      <>
+    <Layout>
+      <div className='header-hero-container'>
       <h1>Services</h1>
       <ul>
         {
@@ -18,8 +19,8 @@ function Services() {
           )
         }
       </ul>
-      </>
     </div>
+    </Layout>
   )
 }
 

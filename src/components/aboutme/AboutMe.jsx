@@ -3,9 +3,9 @@ import useFetchData from '../../hooks/use-fetch-data';
 import './style.css';
 
 function AboutMe() {
-    const { data } = useFetchData();
+  const { data } = useFetchData();
   return (
-    <div className="about-me--container">
+      <div className="about-me--container py-5">
         {
         data.map(item => item.id === 18 ? (
             <>
@@ -16,6 +16,7 @@ function AboutMe() {
         )
         }  
     </div>
+    
   )
 }
 

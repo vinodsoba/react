@@ -7,7 +7,7 @@
     text-align: left;
 }
 
-.footer-links li a {
+.footer-links li {
     color: var(--text-primary);
     text-decoration: none;
 }

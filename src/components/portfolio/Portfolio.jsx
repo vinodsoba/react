@@ -5,9 +5,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-// axios
-import axios from 'axios';
-
 import useFetchData from '../../hooks/use-fetch-portfolio';
 
 // import stylesheet

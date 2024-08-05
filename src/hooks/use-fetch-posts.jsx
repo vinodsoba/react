@@ -32,7 +32,6 @@ function useFetchPosts() {
         fetchPosts();
       }
     }, []);
-    console.log(data);
     if(!data) return null;
   return {
     data,

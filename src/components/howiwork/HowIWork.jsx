@@ -11,19 +11,22 @@ function HowIWork() {
   return (
     <Container>
        <div className='how-i-work'>
+       <div className='how-i-work-container'>
       {
         data.map(item => item.id === 530 ? (
-          <div className='how-i-work-container'>
-             <div className="header-title" dangerouslySetInnerHTML={{__html: item.acf.header_title } } />
+          <>
+           <div className="header-title" dangerouslySetInnerHTML={{__html: item.acf.header_title } } />
               <h2><div className='sub-header-title' dangerouslySetInnerHTML={{__html: item.acf.sub_header_title}} /></h2>
-              <Link>View Services <Icon.ArrowRight className='cta-arrow'/></Link>
-          </div>
-                 )
+          </>    
+        
+          )
         : null
         )
       }
+      
+      </div>
+      <Link>View Services <Icon.ArrowRight className='cta-arrow'/></Link>
     </div>
-    
     </Container>
    
   )
