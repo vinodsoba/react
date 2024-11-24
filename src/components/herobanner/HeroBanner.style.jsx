@@ -4,10 +4,10 @@ export const HeroWrapper = styled.div`
 
 .herobanner-cont {
     padding-top: 126px;
+    padding-bottom: 3em;
 }
 
 width: 100%;
-height: 599px;
 position: relative;
 top: 0;
 bottom: 0;
@@ -44,7 +44,7 @@ h1 {
     text-align: left;
     padding: 20px 10px 20px 0px;
     max-width: 979px;
-    height: 171px;
+    height: 101px;
     flex-shrink: 0;
 
     @media(max-width: 768px){
@@ -76,15 +76,13 @@ h4 {
 a.cta {
     width: 202px;
     height: 56px;
-    background: #0D9488;
+    background: #2C2B30;
     border: none;
-    color: #fff;
     color: #fff;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 29px;
 }
 
 @media(max-width: 776px) {

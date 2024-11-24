@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, p, a, button {
   --bg-secondary-dark: rgb(32, 29, 29);
 
   --bg-navbar-light: white;
-  --bg-navbar-dark: black;
+  --bg-navbar-dark: #313447;
 
   --bg-hero-light: #97c1c1;
   --bg-hero-dark:  #1b4848

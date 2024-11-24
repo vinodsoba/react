@@ -17,11 +17,17 @@ export const SideMenuWrapper = styled.div`
         height: 100vh;
         display: flex;
         flex-direction: column;
-        align-items: start;
-        justify-content: start;
+        align-items: center;
+        justify-content: center;
 
-        .close-sidebar {
-            padding: 46px 242px 312px 20px;
-        }
+        li {
+            list-style: none;
+            
+            a {
+            color: #fff;
+            text-decoration: none;
+            }
+        }   
+
     }
 `

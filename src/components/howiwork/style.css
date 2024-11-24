@@ -1,17 +1,23 @@
 .how-i-work {
     margin-top: 2em;
     margin-bottom: 1em;
+    position: relative;
+    height: 366px;
 }
 
+.how-i-work-container {
+    max-height: 366px;
+    height: 100%;
+}
 .how-i-work-container a {
+    position: absolute;
+    bottom:0;
     float: left;
     color: var(--text-primary-light);
     text-decoration: none;
     transition: margin-left 0.4s;
     padding-bottom: 3em;
-
 }
-
 
 .how-i-work-container a:hover {
     margin-left: 5px;
@@ -19,5 +25,20 @@
 
 .sub-header-title {
     text-align: left;
-    padding: 20px 10px;
+    padding: 0px 10px;
+}
+
+a.cta-arrow {
+    color: var(--text-primary-light);
+    float: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+a.cta-arrow:hover {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: red;
+    margin-left: 20px;;
 }

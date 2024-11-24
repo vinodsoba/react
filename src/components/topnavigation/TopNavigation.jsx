@@ -8,7 +8,6 @@ import NavBarMenuIcon from './../../assets/img/icon/navbar-menu-icon.svg'
 import './style.css';
 import SideMenu from '../sidemenu/SideMenu';
 
-
 function TopNavigation({ setShowSideBar, showSideBar}) {
     const { theme } = useContext(ThemeContext);
     const auth = JSON.parse(localStorage.getItem('user'));
@@ -27,9 +26,9 @@ function TopNavigation({ setShowSideBar, showSideBar}) {
       
       <ul> 
             
-            <li className='signup-btn'><Link to="/signup">Sign up</Link></li>
+            <li className='cta-primary'><Link to="/signup">Sign up</Link></li>
             {!auth ?  (
-              <li className='signup-btn'><Link to="/login">Login</Link></li>
+              <li className='cta-primary'><Link to="/login">Login</Link></li>
             ) : (
               <>
                 <li className='signup-btn'><Link onClick={() => dispatch(logout())}>Logout</Link></li>

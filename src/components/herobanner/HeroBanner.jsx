@@ -31,12 +31,12 @@ function HeroBanner() {
         return (
             <HeroWrapper className='hero-wrapper'>
             { loading ? <div style={{ paddingTop: '50px', fontSize: '20px',fontWeight: '500' }}>Loading..Please wait</div> : 
-            data.map( item => item.id === 530 ? 
+            data.map( item => item.id === 7 ? 
                            
                 <div key={item.id} className={item.acf.choose_background_colour}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>  
                     </div> 
-                    <div style={theme === 'light-theme' ? { background: 'rgb(110 176 239)', height: '100%' }  : {height: '100%', backgroundImage: `url(${StarBackground})`} }>
+                    <div style={theme === 'light-theme' ? { background: 'rgb(110 176 239)', height: '100%' }  : {height: '100%', backgroundImage: `url(${StarBackground})`, backgroundColor: '#313447'} }>
                     <div className='herobanner-cont'>
                     <Container>
                         <Row>
@@ -48,13 +48,13 @@ function HeroBanner() {
                             initial={{ x: '-100vw' }}
                             animate={{ x:  0 }} 
                             transition={{ type: 'ease', duration: 0.5, delay: 0.1 }}
-                            dangerouslySetInnerHTML={{__html: item.acf.hero_banner_title}}>
+                            dangerouslySetInnerHTML={{__html: item.acf.hero_banner_h1}}>
                             </motion.div>
                             </h1>
                         </div> 
                         </Col>
-                        <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{item.acf.hero_banner_subtitle}</h4></Col>
-                        <Col md={12}><Link className="cta" to="./work">{item.acf.button_text}</Link></Col>
+                        <Col md={12}><h4 style={theme === 'dark-theme' ? {color: 'var(--text-primary)'} : {color: 'var(--text-primary)'}} >{item.acf.sub_header_title}</h4></Col>
+                        <Col md={12}><Link className="cta" to="./work">{item.acf.cta_text}</Link></Col>
                         <Galaxy />
                         </Row>
                     </Container>

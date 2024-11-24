@@ -1,20 +1,22 @@
 import React from 'react';
-import useFetchMenu from '../../hooks/use-fetch-menu';
+import useFetchFooterLinks from './../../hooks/use-fetch-footer-data'
 import './style.css';
 
 function FooterLinks() {
-    const { data } = useFetchMenu();
+    const { data } = useFetchFooterLinks([]);    
+
+    console.log(data);
+
+    if(!data) return null;
   return (
     <div className='footer-links'>
         <ul>
-        {
-            data.map(item => (
-                <li key={item.id}>{item.title}</li>
-            ))
-        }
-
-        </ul>
-       
+          {
+            data.map(item => 
+              <li key={item.ID}>{item.title}</li>
+              
+            )}
+       </ul>
     </div>
   )
 }

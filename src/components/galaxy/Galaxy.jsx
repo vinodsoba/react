@@ -42,7 +42,7 @@ export default function Galaxy() {
       <div className="rocket-container">
         <motion.div 
         initial={{ opacity: 0,  scale: 0, y: -200}}
-        animate={{ opacity: 1,  scale: 1, y: -340, x: 200 }}
+        animate={{ opacity: 1,  scale: 1, y: -240, x: 200 }}
         transition={{
           duration: 3,
         }}
