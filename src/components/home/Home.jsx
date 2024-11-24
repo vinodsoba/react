@@ -11,7 +11,7 @@ function Home() {
     return (
         <>
         {
-            data.map( item => item.id === 6 ?
+            data.map( item => item.id === 7 ?
                 <HeroBanner/>                
             : null
             )

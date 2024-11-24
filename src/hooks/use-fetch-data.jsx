@@ -8,19 +8,19 @@ function useFetchData() {
 
     let base64 = require('base-64');
 
-    const username = `${process.env.REACT_APP_API_USERNAME}`;
-    const password = `${process.env.REACT_APP_API_PASSWORD}`;
+    const username = `${process.env.REACT_APP_API_USERNAME_NEW_SITE}`;
+    const password = `${process.env.REACT_APP_API_PASSWORD_NEW_SITE}`;
 
     useEffect(() => {        
         const fetchData = async () =>  {
             setLoading(true);
             try {
                 const {data: response } = await axios.get(
-                    "https://www.vinodsoba.co.uk/wp-json/wp/v2/pages?per_page=15",
+                    "/wp-json/wp/v2/pages?per_page=30",
                     {
                         headers: {
                             Authorization: "Basic " + base64.encode(username + ':' + password),
-                            mode: 'no-cors',
+                            
                         }
 
                     });

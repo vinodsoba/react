@@ -5,11 +5,13 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 
 function MainMenu({ setShowSideBar, showSideBar } ) {
    
-    const { data } = useFetchHeaderMenu([]);
+    const { data } = useFetchHeaderMenu();
 
     const closeModal = () => {
         setShowSideBar(!showSideBar)
     };
+
+    console.log(data);
 
     if(!data) return null;
     return (
@@ -17,11 +19,11 @@ function MainMenu({ setShowSideBar, showSideBar } ) {
             <div className="close-sidebar">
                 <FontAwesomeIcon 
                 onClick={closeModal} 
-                style={{color: '#fff', fontSize: '20px'}} icon={faXmark} />
+                style={{color: '#fff', fontSize: '20px', cursor: 'pointer'}} icon={faXmark} />
             </div>
             {
                 data.map(item => 
-                <li style={{ color: '#fff'}} key={item.id}>{item.title}</li>
+                <li style={{ color: '#fff'}} key={item.id}><a href={item.url}>{item.title}</a></li>
                 )
             }    
         </div>

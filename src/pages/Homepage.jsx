@@ -15,10 +15,10 @@ const Homepage = () => {
   return (
     <Layout>
        <Home />
+        <HowIWork /> 
         <BespokeResponsive />
         <Passionate />
         <WhatIDo />
-        <HowIWork /> 
         <WhyHire />  
     </Layout>
   )

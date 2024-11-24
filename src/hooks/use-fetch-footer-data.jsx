@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function useFetchHeaderMenu() {
+function useFetchFooterLinks() {
     const [ data, setData ] = useState([]);
     const [loading, setLoading ] = useState(true);
 
@@ -14,7 +14,8 @@ function useFetchHeaderMenu() {
         const fetchData = async () =>  {
             try {
                 const {data: response } = await axios.get(
-                    "/wp-json/wp/v2/header-main-menu",
+                    "/wp-json/wp/v2/footer-links",
+                    
                 {
                     headers: {
                         Authorization: "Basic " + base64.encode(username + ":" + password),
@@ -40,4 +41,4 @@ function useFetchHeaderMenu() {
   };
 };
 
-export default useFetchHeaderMenu;
+export default useFetchFooterLinks;

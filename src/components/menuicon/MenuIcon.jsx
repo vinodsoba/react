@@ -11,6 +11,7 @@ function MenuIcon({ setShowSideBar, showSideBar}) {
         src={NavBarMenuIcon} 
         className='nav-bar-icon'
         onClick={openModal}
+        style={{ cursor: 'pointer' }}
         />   
     </div>
   )

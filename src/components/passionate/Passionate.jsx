@@ -17,12 +17,12 @@ function Passionate() {
   return (
     <PassionateContainer>
         {
-            data.map(item => item.id === 530 ?
-            <div className='passionate-wrapper' style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundImage: `url(${item.acf.passionate_image})` }}>
+            data.map(item => item.id === 7 ?
+            <div className='passionate-wrapper' style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundImage: `url(${item.acf.background_image})` }}>
                 <Container>
                   <div className='passionate-container__background'>
-                    <p style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} }>{item.acf.passionate_title}</p>
-                    <h2 style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} } key={item.id}>{item.acf.title_h2}</h2>
+                    <p style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} }>{item.acf.headline_text}</p>
+                    <h2 style={theme === 'light-theme' ? { color: 'var(--text-primary-dark)'} : {color: 'var(--text-primary-light)'} } key={item.id}>{item.acf.main_heading_text}</h2>
                     <Link className="cta" to={item.acf.button_cta_link}>{item.acf.button_cta_text}</Link>
                     </div>
                   </Container>

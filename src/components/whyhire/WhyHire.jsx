@@ -21,7 +21,7 @@ function WhyHire() {
             <div className='why-cont--content'>
               <Col md={7} key={index.id}>
                 <div className="text-start" style={{maxWidth: '100%', width: '700px'}} dangerouslySetInnerHTML={{__html: index.acf.why_content}}/>
-                <Link className="cta-plain" to={index.acf.why_button.cta_url}>{index.acf.why_button.cta_text}</Link>
+                <Link className="cta-plain" /*</Col>to={index.acf.why_button.cta_url}*/>View Work</Link>
               </Col>
             </div>
             <Col md={5}>
